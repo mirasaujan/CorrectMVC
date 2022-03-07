@@ -9,7 +9,7 @@ import UIKit
 
 class MockPostListProvider: PostListProvider {
     func fetch() async throws -> [Post] {
-        let url = createLocalUrl(forImageNamed: "demo")!
+        let url = URL(string: "https://i.redd.it/y5q2ylf36gm61.jpg")!
         return [
             Post(id: "1", title: "Hello", type: .image(url)),
             Post(id: "2", title: "This", type: .image(url)),

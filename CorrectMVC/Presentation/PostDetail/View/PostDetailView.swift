@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 extension PostDetailView {
     struct ViewModel {
@@ -44,7 +45,7 @@ final class PostDetailView: BaseView {
     }
 
     func configure(viewModel: ViewModel) {
-        imageView.image = UIImage(contentsOfFile: viewModel.imageURL.path)
+        imageView.sd_setImage(with: viewModel.imageURL, placeholderImage: nil, options: [.progressiveLoad])
         titleLabel.text = viewModel.title
     }
 }

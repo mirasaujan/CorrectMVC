@@ -41,6 +41,14 @@
 		1E68FCA827D6301900057B8D /* PostDetailAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E68FCA727D6301900057B8D /* PostDetailAssembly.swift */; };
 		1E68FCAB27D6329600057B8D /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1E68FCAA27D6329600057B8D /* SnapKit */; };
 		1E68FCAD27D6341800057B8D /* Asset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E68FCAC27D6341800057B8D /* Asset.xcassets */; };
+		1E68FCB327D64CE100057B8D /* RedditAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E68FCB227D64CE100057B8D /* RedditAPI.swift */; };
+		1E68FCB527D64CF000057B8D /* RedditAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E68FCB427D64CF000057B8D /* RedditAPIError.swift */; };
+		1E68FCB727D64D3C00057B8D /* RedditPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E68FCB627D64D3C00057B8D /* RedditPost.swift */; };
+		1E68FCB927D64D5100057B8D /* RedditListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E68FCB827D64D5100057B8D /* RedditListing.swift */; };
+		1E68FCBB27D64D6D00057B8D /* RedditSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E68FCBA27D64D6D00057B8D /* RedditSort.swift */; };
+		1E68FCBE27D64DA700057B8D /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E68FCBD27D64DA700057B8D /* Array+Extensions.swift */; };
+		1E68FCC027D64DC900057B8D /* RedditPostListProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E68FCBF27D64DC900057B8D /* RedditPostListProvider.swift */; };
+		1E68FCC327D6553E00057B8D /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 1E68FCC227D6553E00057B8D /* SDWebImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +106,13 @@
 		1E68FCA427D62DCC00057B8D /* PostListAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListAssembly.swift; sourceTree = "<group>"; };
 		1E68FCA727D6301900057B8D /* PostDetailAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailAssembly.swift; sourceTree = "<group>"; };
 		1E68FCAC27D6341800057B8D /* Asset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Asset.xcassets; sourceTree = "<group>"; };
+		1E68FCB227D64CE100057B8D /* RedditAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditAPI.swift; sourceTree = "<group>"; };
+		1E68FCB427D64CF000057B8D /* RedditAPIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditAPIError.swift; sourceTree = "<group>"; };
+		1E68FCB627D64D3C00057B8D /* RedditPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditPost.swift; sourceTree = "<group>"; };
+		1E68FCB827D64D5100057B8D /* RedditListing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditListing.swift; sourceTree = "<group>"; };
+		1E68FCBA27D64D6D00057B8D /* RedditSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditSort.swift; sourceTree = "<group>"; };
+		1E68FCBD27D64DA700057B8D /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
+		1E68FCBF27D64DC900057B8D /* RedditPostListProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditPostListProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E68FCC327D6553E00057B8D /* SDWebImage in Frameworks */,
 				1E68FCAB27D6329600057B8D /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -207,7 +223,10 @@
 		1E68FC5D27D4764800057B8D /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				1E68FCBC27D64DA000057B8D /* Extensions */,
+				1E68FCB127D64CCC00057B8D /* Reddit */,
 				1E68FC7C27D4E4C800057B8D /* MockPostListProvider.swift */,
+				1E68FCBF27D64DC900057B8D /* RedditPostListProvider.swift */,
 				1E68FCA127D626BE00057B8D /* FavoritePostListProvider.swift */,
 				1E68FC9427D5FECB00057B8D /* FavoritePostListStorage.swift */,
 				1E68FCAC27D6341800057B8D /* Asset.xcassets */,
@@ -345,6 +364,26 @@
 			path = Assembly;
 			sourceTree = "<group>";
 		};
+		1E68FCB127D64CCC00057B8D /* Reddit */ = {
+			isa = PBXGroup;
+			children = (
+				1E68FCB227D64CE100057B8D /* RedditAPI.swift */,
+				1E68FCB627D64D3C00057B8D /* RedditPost.swift */,
+				1E68FCB827D64D5100057B8D /* RedditListing.swift */,
+				1E68FCBA27D64D6D00057B8D /* RedditSort.swift */,
+				1E68FCB427D64CF000057B8D /* RedditAPIError.swift */,
+			);
+			path = Reddit;
+			sourceTree = "<group>";
+		};
+		1E68FCBC27D64DA000057B8D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1E68FCBD27D64DA700057B8D /* Array+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -363,6 +402,7 @@
 			name = CorrectMVC;
 			packageProductDependencies = (
 				1E68FCAA27D6329600057B8D /* SnapKit */,
+				1E68FCC227D6553E00057B8D /* SDWebImage */,
 			);
 			productName = CorrectMVC;
 			productReference = 1E6395FE27D0EBD500DA0B1A /* CorrectMVC.app */;
@@ -438,6 +478,7 @@
 			mainGroup = 1E6395F527D0EBD500DA0B1A;
 			packageReferences = (
 				1E68FCA927D6329600057B8D /* XCRemoteSwiftPackageReference "SnapKit" */,
+				1E68FCC127D6553E00057B8D /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 1E6395FF27D0EBD500DA0B1A /* Products */;
 			projectDirPath = "";
@@ -482,18 +523,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E68FCB327D64CE100057B8D /* RedditAPI.swift in Sources */,
 				1E68FCA827D6301900057B8D /* PostDetailAssembly.swift in Sources */,
 				1E68FC7D27D4E4C800057B8D /* MockPostListProvider.swift in Sources */,
 				1E63960227D0EBD500DA0B1A /* AppDelegate.swift in Sources */,
 				1E68FC6027D476B600057B8D /* PostListController.swift in Sources */,
+				1E68FCB727D64D3C00057B8D /* RedditPost.swift in Sources */,
 				1E68FC8B27D5EF1900057B8D /* PostDetailView.swift in Sources */,
 				1E68FC6B27D4A7AC00057B8D /* NSObject+TypeName.swift in Sources */,
 				1E68FC7227D4A81900057B8D /* Reusable.swift in Sources */,
+				1E68FCB527D64CF000057B8D /* RedditAPIError.swift in Sources */,
 				1E68FC8127D4F32900057B8D /* UICollectionView+Reusable.swift in Sources */,
 				1E68FC7827D4AA5800057B8D /* PostListView.swift in Sources */,
 				1E68FC6E27D4A7C000057B8D /* UIView+NibInit.swift in Sources */,
 				1E68FC7427D4A8BA00057B8D /* BaseViewController.swift in Sources */,
+				1E68FCC027D64DC900057B8D /* RedditPostListProvider.swift in Sources */,
 				1E68FC8927D5EF0F00057B8D /* PostDetailModel.swift in Sources */,
+				1E68FCBB27D64D6D00057B8D /* RedditSort.swift in Sources */,
+				1E68FCB927D64D5100057B8D /* RedditListing.swift in Sources */,
 				1E68FC6727D4775B00057B8D /* PostListProvider.swift in Sources */,
 				1E68FC8327D4F52E00057B8D /* PostListLayout.swift in Sources */,
 				1E68FCA227D626BE00057B8D /* FavoritePostListProvider.swift in Sources */,
@@ -502,6 +549,7 @@
 				1E68FC7F27D4F20800057B8D /* PostListCell.swift in Sources */,
 				1E68FC9E27D61FFC00057B8D /* LaunchCoordinator.swift in Sources */,
 				1E68FCA027D6263E00057B8D /* FavoriteCoordinator.swift in Sources */,
+				1E68FCBE27D64DA700057B8D /* Array+Extensions.swift in Sources */,
 				1E68FC9527D5FECB00057B8D /* FavoritePostListStorage.swift in Sources */,
 				1E68FC8F27D5F7D400057B8D /* BaseView.swift in Sources */,
 				1E68FCA527D62DCC00057B8D /* PostListAssembly.swift in Sources */,
@@ -854,6 +902,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		1E68FCC127D6553E00057B8D /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -861,6 +917,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1E68FCA927D6329600057B8D /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		1E68FCC227D6553E00057B8D /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1E68FCC127D6553E00057B8D /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -25,7 +25,7 @@ final class BrowseCoordinator {
                 guard let self = self else { return }
                 self.navigationController?.pushViewController(self.postDetailViewController(post: post), animated: true)
             }
-        let assembly = PostListAssembly(context: context, dep: PostListAssembly.Dependency(provider: MockPostListProvider()))
+        let assembly = PostListAssembly(context: context, dep: PostListAssembly.Dependency(provider: RedditPostListProvider(apiClient: RedditAPI())))
 
         return assembly.create()
     }

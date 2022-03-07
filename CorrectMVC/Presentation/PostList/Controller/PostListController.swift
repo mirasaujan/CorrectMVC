@@ -50,18 +50,14 @@ extension PostListController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: PostListCell = collectionView.dequeueCell(for: indexPath)
-        var config = UIListContentConfiguration.valueCell()
         let post = posts[indexPath.row]
-        config.text = post.title
 
         switch post.type {
         case .image(let url):
-            config.image = UIImage(contentsOfFile: url.path)
+            cell.configure(viewModel: PostListCell.ViewModel(imageURL: url, title: post.title ?? ""))
         case .text(let text):
-            config.secondaryText = text
+            break
         }
-
-        cell.contentConfiguration = config
         
         return cell
     }

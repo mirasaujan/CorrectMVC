@@ -11,6 +11,12 @@ struct Post: Codable {
     let id: String
     let title: String?
     let type: PostType
+
+    init(id: String, title: String?, type: PostType) {
+        self.id = id
+        self.title = title
+        self.type = type
+    }
 }
 
 extension Post {
