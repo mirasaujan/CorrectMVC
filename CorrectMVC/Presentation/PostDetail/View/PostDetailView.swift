@@ -28,7 +28,7 @@ final class PostDetailView: BaseView {
     }()
     
     override func setup() {
-        backgroundColor = .white
+        backgroundColor = .systemBackground
         addSubview(imageView)
         imageView.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
