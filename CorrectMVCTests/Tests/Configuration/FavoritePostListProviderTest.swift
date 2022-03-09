@@ -11,12 +11,14 @@ import XCTest
 class FavoritePostListProviderTest: XCTestCase {
     var favoriteProvider: FavoritePostListProvider!
     var favoriteStorage: FavoritePostListStorage!
+    var defaults: UserDefaults!
+
+    override func setUp() {
+        defaults = UserDefaults.createMock()
+        favoriteProvider = FavoritePostListProvider(storage: defaults)
+    }
 
     func testEmptyFavoriteProvider() async throws {
-        // Given
-        let defaults = UserDefaults.createMock()
-        favoriteProvider = FavoritePostListProvider(storage: defaults)
-
         // When
         let list = try await favoriteProvider.fetch()
 
@@ -26,15 +28,13 @@ class FavoritePostListProviderTest: XCTestCase {
 
     func testFavoriteProviderWithValue() async throws {
         // Given
-        let defaults = UserDefaults.createMock()
-        favoriteProvider = FavoritePostListProvider(storage: defaults)
         favoriteStorage = FavoritePostListStorage(storage: defaults)
-
+        
         // When
-        favoriteStorage.add(post: Post.mock1)
+        favoriteStorage.add(post: Post.stub1)
         let list = try await favoriteProvider.fetch()
 
         // Then
-        XCTAssertEqual(list, [Post.mock1])
+        XCTAssertEqual(list, [Post.stub1])
     }
 }

@@ -9,17 +9,16 @@ import Foundation
 import Combine
 
 class RedditPostListProvider: PostListProvider {
-    private let apiClient: RedditAPI
+    private let apiClient: RedditAPIProtocol
     private var bag = Set<AnyCancellable>()
 
-    init(apiClient: RedditAPI) {
+    init(apiClient: RedditAPIProtocol) {
         self.apiClient = apiClient
     }
 
     func fetch() async throws -> [Post] {
-
         return try await withCheckedThrowingContinuation { continuation in
-            apiClient.feedFor(subreddit: "memes", sort: RedditSort(type: .top, period: .all), after: nil)
+            apiClient.memesFeed()
                 .sink { error in
                     print(error)
                 } receiveValue: { listing in
@@ -28,7 +27,7 @@ class RedditPostListProvider: PostListProvider {
                             return Post(id: $0.id, title: $0.title, type: .image(imageURL))
                         }
 
-                        return Post(id: $0.id, title: $0.title, type: .text($0.selftext))
+                        return nil
                     })
                 }
                 .store(in: &bag)

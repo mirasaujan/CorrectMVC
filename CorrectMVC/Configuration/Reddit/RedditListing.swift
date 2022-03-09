@@ -7,18 +7,29 @@
 
 import Foundation
 
-struct RedditListing: Decodable {
+public struct RedditListing: Decodable {
     let data: ListingData
     var posts: [RedditPost] {
         data.children.map { $0.data }
     }
 
-    struct ListingData: Decodable {
+    public init(data: ListingData) {
+        self.data = data
+    }
+
+    public struct ListingData: Decodable {
         let children: [PostData]
 
-        struct PostData: Decodable {
+        public init(children: [PostData]) {
+            self.children = children
+        }
+
+        public struct PostData: Decodable {
             let data: RedditPost
+
+            public init(data: RedditPost) {
+                self.data = data
+            }
         }
     }
 }
-
