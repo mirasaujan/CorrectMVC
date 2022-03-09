@@ -55,7 +55,7 @@ extension PostListController: UICollectionViewDataSource {
         switch post.type {
         case .image(let url):
             cell.configure(viewModel: PostListCell.ViewModel(imageURL: url, title: post.title ?? ""))
-        case .text(let text):
+        case .text:
             break
         }
         

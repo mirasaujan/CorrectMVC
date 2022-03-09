@@ -22,12 +22,6 @@ final class PostDetailController: BaseViewController<PostDetailModel, PostDetail
             .store(in: &bag)
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
-        model.fetch()
-    }
-
     private func createFavoriteNavBar(isFavorite: Bool) {
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             image: UIImage(systemName: isFavorite ? "star.fill" : "star"),

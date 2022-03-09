@@ -29,10 +29,6 @@ final class PostDetailModel {
         isFavorite = CurrentValueSubject(dep.storage.contains(id: context.post.id))
     }
 
-    func fetch() {
-        dep.storage.fetch()
-    }
-
     func createViewModel() -> PostDetailView.ViewModel {
         switch context.post.type {
         case .image(let url):
