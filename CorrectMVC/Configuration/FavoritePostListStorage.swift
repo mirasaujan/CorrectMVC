@@ -17,6 +17,15 @@ final class FavoritePostListStorage: PostListStorage {
     init(storage: UserDefaults = UserDefaults.standard) {
         self.storage = storage
         self.list = CurrentValueSubject([])
+
+        list
+            .dropFirst()
+            .sink { [weak self] postList in
+                if let encoded = try? JSONEncoder().encode(postList) {
+                    self?.storage.set(encoded, forKey: "favorite_storage")
+                }
+            }
+            .store(in: &bag)
     }
 
     func fetch() {
@@ -25,14 +34,6 @@ final class FavoritePostListStorage: PostListStorage {
                 self.list.value = list
             }
         }
-
-        list
-            .sink { [weak self] postList in
-                if let encoded = try? JSONEncoder().encode(postList) {
-                    self?.storage.set(encoded, forKey: "favorite_storage")
-                }
-            }
-            .store(in: &bag)
     }
 
     func contains(id: String) -> Bool {

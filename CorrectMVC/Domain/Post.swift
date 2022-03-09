@@ -7,19 +7,23 @@
 
 import Foundation
 
-struct Post: Codable {
+public struct Post: Codable, Equatable {
     let id: String
     let title: String?
     let type: PostType
 
-    init(id: String, title: String?, type: PostType) {
+    public init(id: String, title: String?, type: PostType) {
         self.id = id
         self.title = title
         self.type = type
     }
+
+    public static func == (lhs: Post, rhs: Post) -> Bool {
+        lhs.id == rhs.id
+    }
 }
 
-extension Post {
+public extension Post {
     enum PostType: Codable {
         case image(URL)
         case text(String)

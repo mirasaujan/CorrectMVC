@@ -5,6 +5,7 @@
 //  Created by Miras Karazhigitov on 06.03.2022.
 //
 
+import CorrectMVC
 import UIKit
 
 class MockPostListProvider: PostListProvider {

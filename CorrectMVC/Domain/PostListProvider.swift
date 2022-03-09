@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol PostListProvider {
+public protocol PostListProvider {
     func fetch() async throws -> [Post]
 }

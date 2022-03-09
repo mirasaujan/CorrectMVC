@@ -12,7 +12,7 @@
 
 <h2>🥅 Motivation</h2>
 <li>MVC is considered a bad architecture. (Massive View Controller)</li>
-<li>VIPER and all its deviations are bad and ruin thousand of lives for people who continue to use it.</li>
+<li>VIPER and all its deviations are bad and ruin thousand of lives</li>
 
 <br><br>
 
