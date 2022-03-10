@@ -19,6 +19,10 @@
 		1E06D2F227D9969F0092351D /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E06D2F127D9969F0092351D /* UIView+Layout.swift */; };
 		1E06D2F527D9A22B0092351D /* BrowseCoordinatorFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E06D2F427D9A22B0092351D /* BrowseCoordinatorFlow.swift */; };
 		1E06D2F827D9A32A0092351D /* FavoriteCoordinatorFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E06D2F727D9A32A0092351D /* FavoriteCoordinatorFlow.swift */; };
+		1E06D2FB27D9A3F90092351D /* FavoriteCoordinatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E06D2FA27D9A3F90092351D /* FavoriteCoordinatorTest.swift */; };
+		1E06D30227D9A4CC0092351D /* MockFavoriteCoordinatorFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E06D30127D9A4CC0092351D /* MockFavoriteCoordinatorFlow.swift */; };
+		1E06D30427D9A7AB0092351D /* BrowseCoordinatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E06D30327D9A7AB0092351D /* BrowseCoordinatorTest.swift */; };
+		1E06D30627D9A7D80092351D /* MockBrowseCoordinatorFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E06D30527D9A7D80092351D /* MockBrowseCoordinatorFlow.swift */; };
 		1E63960227D0EBD500DA0B1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E63960127D0EBD500DA0B1A /* AppDelegate.swift */; };
 		1E63960B27D0EBD600DA0B1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E63960A27D0EBD600DA0B1A /* Assets.xcassets */; };
 		1E63960E27D0EBD600DA0B1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E63960C27D0EBD600DA0B1A /* LaunchScreen.storyboard */; };
@@ -92,6 +96,10 @@
 		1E06D2F127D9969F0092351D /* UIView+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
 		1E06D2F427D9A22B0092351D /* BrowseCoordinatorFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseCoordinatorFlow.swift; sourceTree = "<group>"; };
 		1E06D2F727D9A32A0092351D /* FavoriteCoordinatorFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCoordinatorFlow.swift; sourceTree = "<group>"; };
+		1E06D2FA27D9A3F90092351D /* FavoriteCoordinatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCoordinatorTest.swift; sourceTree = "<group>"; };
+		1E06D30127D9A4CC0092351D /* MockFavoriteCoordinatorFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFavoriteCoordinatorFlow.swift; sourceTree = "<group>"; };
+		1E06D30327D9A7AB0092351D /* BrowseCoordinatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseCoordinatorTest.swift; sourceTree = "<group>"; };
+		1E06D30527D9A7D80092351D /* MockBrowseCoordinatorFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBrowseCoordinatorFlow.swift; sourceTree = "<group>"; };
 		1E6395FE27D0EBD500DA0B1A /* CorrectMVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CorrectMVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E63960127D0EBD500DA0B1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E63960A27D0EBD600DA0B1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -207,8 +215,44 @@
 		1E06D2F927D9A3B50092351D /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				1E06D2FA27D9A3F90092351D /* FavoriteCoordinatorTest.swift */,
+				1E06D30327D9A7AB0092351D /* BrowseCoordinatorTest.swift */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		1E06D2FC27D9A4530092351D /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				1E06D30127D9A4CC0092351D /* MockFavoriteCoordinatorFlow.swift */,
+				1E06D30527D9A7D80092351D /* MockBrowseCoordinatorFlow.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		1E06D2FD27D9A45F0092351D /* General */ = {
+			isa = PBXGroup;
+			children = (
+				1E92992E27D8497000F27096 /* UserDefaults+MockFactory.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		1E06D2FE27D9A4720092351D /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				1E06D2DF27D8EEAC0092351D /* MockRedditAPI.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		1E06D30027D9A49D0092351D /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				1E68FC7C27D4E4C800057B8D /* MockPostListProvider.swift */,
+				1E06D2EF27D900270092351D /* MockPostListStorage.swift */,
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 		1E6395F527D0EBD500DA0B1A = {
@@ -458,10 +502,10 @@
 		1E92992927D8449700F27096 /* Mock */ = {
 			isa = PBXGroup;
 			children = (
-				1E68FC7C27D4E4C800057B8D /* MockPostListProvider.swift */,
-				1E06D2EF27D900270092351D /* MockPostListStorage.swift */,
-				1E92992E27D8497000F27096 /* UserDefaults+MockFactory.swift */,
-				1E06D2DF27D8EEAC0092351D /* MockRedditAPI.swift */,
+				1E06D30027D9A49D0092351D /* Presentation */,
+				1E06D2FC27D9A4530092351D /* Application */,
+				1E06D2FE27D9A4720092351D /* Configuration */,
+				1E06D2FD27D9A45F0092351D /* General */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -660,14 +704,18 @@
 				1E06D2E627D8F2750092351D /* ListingData+Stub.swift in Sources */,
 				1E06D2E427D8F1F00092351D /* RedditPost+Stub.swift in Sources */,
 				1E92992F27D8497000F27096 /* UserDefaults+MockFactory.swift in Sources */,
+				1E06D30227D9A4CC0092351D /* MockFavoriteCoordinatorFlow.swift in Sources */,
 				1E92992C27D844B400F27096 /* MockPostListProvider.swift in Sources */,
 				1E92992527D8406C00F27096 /* FavoritePostListProviderTest.swift in Sources */,
 				1E06D2E027D8EEAC0092351D /* MockRedditAPI.swift in Sources */,
+				1E06D30427D9A7AB0092351D /* BrowseCoordinatorTest.swift in Sources */,
 				1E92992B27D844B000F27096 /* Post+Stub.swift in Sources */,
 				1E06D2EE27D8FFD80092351D /* PostDetailModelTest.swift in Sources */,
 				1E06D2DE27D8EDD80092351D /* RedditPostListProviderTest.swift in Sources */,
 				1E06D2E227D8F1230092351D /* RedditListing+Stub.swift in Sources */,
 				1E92992727D840BA00F27096 /* FavoritePostListStorageTest.swift in Sources */,
+				1E06D30627D9A7D80092351D /* MockBrowseCoordinatorFlow.swift in Sources */,
+				1E06D2FB27D9A3F90092351D /* FavoriteCoordinatorTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

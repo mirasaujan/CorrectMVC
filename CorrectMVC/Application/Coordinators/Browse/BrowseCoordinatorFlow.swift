@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol BrowseCoordinatorFlowProtocol {
+public protocol BrowseCoordinatorFlowProtocol {
     func postListViewController(onSelect: @escaping (Post) -> Void) -> UIViewController
     func postDetailViewController(post: Post) -> UIViewController
 }

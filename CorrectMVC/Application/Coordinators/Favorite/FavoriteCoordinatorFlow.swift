@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol FavoriteCoordinatorFlowProtocol {
+public protocol FavoriteCoordinatorFlowProtocol {
     func postListViewController(onSelect: @escaping (Post) -> Void) -> UIViewController
     func postDetailViewController(post: Post) -> UIViewController
 }
