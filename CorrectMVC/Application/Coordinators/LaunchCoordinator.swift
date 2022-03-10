@@ -25,7 +25,7 @@ final class LaunchCoordinator {
             image: UIImage(systemName: "flame.circle"),
             selectedImage: UIImage(systemName: "flame.circle.fill")
         )
-        browseCoordinator = BrowseCoordinator(navigationController: browseNC)
+        browseCoordinator = BrowseCoordinator(navigationController: browseNC, flow: BrowseCoordinatorFlow())
         browseCoordinator.start()
 
         return browseNC
@@ -38,7 +38,7 @@ final class LaunchCoordinator {
             image: UIImage(systemName: "suit.heart"),
             selectedImage: UIImage(systemName: "suit.heart.fill")
         )
-        favoriteCoordinator = FavoriteCoordinator(navigationController: favoriteNC)
+        favoriteCoordinator = FavoriteCoordinator(navigationController: favoriteNC, flow: FavoriteCoordinatorFlow())
         favoriteCoordinator.start()
 
         return favoriteNC

@@ -17,6 +17,8 @@
 		1E06D2EE27D8FFD80092351D /* PostDetailModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E06D2ED27D8FFD80092351D /* PostDetailModelTest.swift */; };
 		1E06D2F027D900270092351D /* MockPostListStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E06D2EF27D900270092351D /* MockPostListStorage.swift */; };
 		1E06D2F227D9969F0092351D /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E06D2F127D9969F0092351D /* UIView+Layout.swift */; };
+		1E06D2F527D9A22B0092351D /* BrowseCoordinatorFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E06D2F427D9A22B0092351D /* BrowseCoordinatorFlow.swift */; };
+		1E06D2F827D9A32A0092351D /* FavoriteCoordinatorFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E06D2F727D9A32A0092351D /* FavoriteCoordinatorFlow.swift */; };
 		1E63960227D0EBD500DA0B1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E63960127D0EBD500DA0B1A /* AppDelegate.swift */; };
 		1E63960B27D0EBD600DA0B1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E63960A27D0EBD600DA0B1A /* Assets.xcassets */; };
 		1E63960E27D0EBD600DA0B1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E63960C27D0EBD600DA0B1A /* LaunchScreen.storyboard */; };
@@ -88,6 +90,8 @@
 		1E06D2ED27D8FFD80092351D /* PostDetailModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailModelTest.swift; sourceTree = "<group>"; };
 		1E06D2EF27D900270092351D /* MockPostListStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPostListStorage.swift; sourceTree = "<group>"; };
 		1E06D2F127D9969F0092351D /* UIView+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
+		1E06D2F427D9A22B0092351D /* BrowseCoordinatorFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseCoordinatorFlow.swift; sourceTree = "<group>"; };
+		1E06D2F727D9A32A0092351D /* FavoriteCoordinatorFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCoordinatorFlow.swift; sourceTree = "<group>"; };
 		1E6395FE27D0EBD500DA0B1A /* CorrectMVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CorrectMVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E63960127D0EBD500DA0B1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E63960A27D0EBD600DA0B1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -180,6 +184,31 @@
 				1E06D2ED27D8FFD80092351D /* PostDetailModelTest.swift */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		1E06D2F327D9A1FA0092351D /* Browse */ = {
+			isa = PBXGroup;
+			children = (
+				1E68FC9B27D61EF500057B8D /* BrowseCoordinator.swift */,
+				1E06D2F427D9A22B0092351D /* BrowseCoordinatorFlow.swift */,
+			);
+			path = Browse;
+			sourceTree = "<group>";
+		};
+		1E06D2F627D9A3160092351D /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				1E68FC9F27D6263E00057B8D /* FavoriteCoordinator.swift */,
+				1E06D2F727D9A32A0092351D /* FavoriteCoordinatorFlow.swift */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
+		1E06D2F927D9A3B50092351D /* Application */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 		1E6395F527D0EBD500DA0B1A = {
@@ -383,8 +412,8 @@
 			isa = PBXGroup;
 			children = (
 				1E68FC9D27D61FFC00057B8D /* LaunchCoordinator.swift */,
-				1E68FC9B27D61EF500057B8D /* BrowseCoordinator.swift */,
-				1E68FC9F27D6263E00057B8D /* FavoriteCoordinator.swift */,
+				1E06D2F327D9A1FA0092351D /* Browse */,
+				1E06D2F627D9A3160092351D /* Favorite */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -419,6 +448,7 @@
 		1E92992827D8448C00F27096 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				1E06D2F927D9A3B50092351D /* Application */,
 				1E06D2EA27D8F6C70092351D /* Presentation */,
 				1E92993027D84CE900F27096 /* Configuration */,
 			);
@@ -587,10 +617,12 @@
 				1E68FCA827D6301900057B8D /* PostDetailAssembly.swift in Sources */,
 				1E63960227D0EBD500DA0B1A /* AppDelegate.swift in Sources */,
 				1E68FC6027D476B600057B8D /* PostListController.swift in Sources */,
+				1E06D2F827D9A32A0092351D /* FavoriteCoordinatorFlow.swift in Sources */,
 				1E68FCB727D64D3C00057B8D /* RedditPost.swift in Sources */,
 				1E68FC8B27D5EF1900057B8D /* PostDetailView.swift in Sources */,
 				1E68FC6B27D4A7AC00057B8D /* NSObject+TypeName.swift in Sources */,
 				1E68FC7227D4A81900057B8D /* Reusable.swift in Sources */,
+				1E06D2F527D9A22B0092351D /* BrowseCoordinatorFlow.swift in Sources */,
 				1E68FCB527D64CF000057B8D /* RedditAPIError.swift in Sources */,
 				1E68FC8127D4F32900057B8D /* UICollectionView+Reusable.swift in Sources */,
 				1E68FC7827D4AA5800057B8D /* PostListView.swift in Sources */,
