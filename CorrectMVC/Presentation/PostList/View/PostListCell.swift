@@ -30,17 +30,17 @@ final class PostListCell: BaseCell {
     override func setup() {
         backgroundColor = .systemBackground
         addSubview(imageView)
-        imageView.snp.makeConstraints { make in
-            make.top.bottom.equalToSuperview()
-            make.leading.equalToSuperview().offset(16)
-            make.width.height.equalTo(40)
-        }
+        imageView.pin(on: .top)
+        imageView.pin(on: .bottom)
+        imageView.pin(on: .leading, constant: 16)
+        imageView.pinAspectRatio(1)
+        imageView.pinWidth(to: 40)
 
         addSubview(titleLabel)
-        titleLabel.snp.makeConstraints { make in
-            make.leading.equalTo(imageView.snp.trailing).offset(10)
-            make.top.bottom.trailing.equalToSuperview()
-        }
+        titleLabel.pin(on: .top)
+        titleLabel.pin(on: .bottom)
+        titleLabel.pin(on: .trailing)
+        titleLabel.pin(on: .leading, to: imageView, on: .trailing, constant: 10)
     }
 
     func configure(viewModel: ViewModel) {

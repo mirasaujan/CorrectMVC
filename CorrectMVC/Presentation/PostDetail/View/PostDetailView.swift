@@ -31,17 +31,16 @@ final class PostDetailView: BaseView {
     override func setup() {
         backgroundColor = .systemBackground
         addSubview(imageView)
-        imageView.snp.makeConstraints { make in
-            make.centerY.equalToSuperview()
-            make.leading.trailing.equalToSuperview()
-            make.height.equalTo(400)
-        }
+        imageView.pin(on: .centerY)
+        imageView.pin(on: .leading)
+        imageView.pin(on: .trailing)
+        imageView.pinAspectRatio(1)
+        imageView.pinHeight(to: 300)
 
         addSubview(titleLabel)
-        titleLabel.snp.makeConstraints { make in
-            make.leading.trailing.equalToSuperview()
-            make.top.equalTo(imageView.snp.bottom)
-        }
+        titleLabel.pin(on: .leading)
+        titleLabel.pin(on: .trailing)
+        titleLabel.pin(on: .top, to: imageView, on: .bottom)
     }
 
     func configure(viewModel: ViewModel) {

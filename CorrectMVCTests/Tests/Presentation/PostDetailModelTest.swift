@@ -12,9 +12,6 @@ class PostDetailModelTest: XCTestCase {
     var postDetailModel: PostDetailModel!
     let response = Post.stub1
 
-    override func setUpWithError() throws {
-    }
-
     func testCreateViewModel() {
         // Given
         let dep = PostDetailModel.Dependency(storage: MockPostListStorage(initialValue: []))

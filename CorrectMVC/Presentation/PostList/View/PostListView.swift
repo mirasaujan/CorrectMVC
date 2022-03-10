@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SnapKit
 
 final class PostListView: BaseView {
     let collectionView: UICollectionView = {
@@ -16,8 +15,6 @@ final class PostListView: BaseView {
 
     override func setup() {
         addSubview(collectionView)
-        collectionView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
+        collectionView.pinToEdges()
     }
 }
