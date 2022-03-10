@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-protocol PostListStorage {
+public protocol PostListStorage {
     var list: CurrentValueSubject<[Post], Never> { get }
     func fetch()
 

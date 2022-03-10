@@ -9,7 +9,7 @@ import UIKit
 import SDWebImage
 
 extension PostDetailView {
-    struct ViewModel {
+    struct ViewModel: Equatable {
         let imageURL: URL
         let title: String
     }

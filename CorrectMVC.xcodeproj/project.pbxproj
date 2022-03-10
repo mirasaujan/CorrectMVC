@@ -13,6 +13,9 @@
 		1E06D2E427D8F1F00092351D /* RedditPost+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E06D2E327D8F1F00092351D /* RedditPost+Stub.swift */; };
 		1E06D2E627D8F2750092351D /* ListingData+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E06D2E527D8F2750092351D /* ListingData+Stub.swift */; };
 		1E06D2E827D8F2F40092351D /* PostData+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E06D2E727D8F2F40092351D /* PostData+Stub.swift */; };
+		1E06D2EC27D8F7300092351D /* PostListModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E06D2EB27D8F7300092351D /* PostListModelTest.swift */; };
+		1E06D2EE27D8FFD80092351D /* PostDetailModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E06D2ED27D8FFD80092351D /* PostDetailModelTest.swift */; };
+		1E06D2F027D900270092351D /* MockPostListStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E06D2EF27D900270092351D /* MockPostListStorage.swift */; };
 		1E63960227D0EBD500DA0B1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E63960127D0EBD500DA0B1A /* AppDelegate.swift */; };
 		1E63960B27D0EBD600DA0B1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E63960A27D0EBD600DA0B1A /* Assets.xcassets */; };
 		1E63960E27D0EBD600DA0B1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E63960C27D0EBD600DA0B1A /* LaunchScreen.storyboard */; };
@@ -81,6 +84,9 @@
 		1E06D2E327D8F1F00092351D /* RedditPost+Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RedditPost+Stub.swift"; sourceTree = "<group>"; };
 		1E06D2E527D8F2750092351D /* ListingData+Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListingData+Stub.swift"; sourceTree = "<group>"; };
 		1E06D2E727D8F2F40092351D /* PostData+Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PostData+Stub.swift"; sourceTree = "<group>"; };
+		1E06D2EB27D8F7300092351D /* PostListModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListModelTest.swift; sourceTree = "<group>"; };
+		1E06D2ED27D8FFD80092351D /* PostDetailModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailModelTest.swift; sourceTree = "<group>"; };
+		1E06D2EF27D900270092351D /* MockPostListStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPostListStorage.swift; sourceTree = "<group>"; };
 		1E6395FE27D0EBD500DA0B1A /* CorrectMVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CorrectMVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E63960127D0EBD500DA0B1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E63960A27D0EBD600DA0B1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -170,6 +176,8 @@
 		1E06D2EA27D8F6C70092351D /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				1E06D2EB27D8F7300092351D /* PostListModelTest.swift */,
+				1E06D2ED27D8FFD80092351D /* PostDetailModelTest.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -420,6 +428,7 @@
 			isa = PBXGroup;
 			children = (
 				1E68FC7C27D4E4C800057B8D /* MockPostListProvider.swift */,
+				1E06D2EF27D900270092351D /* MockPostListStorage.swift */,
 				1E92992E27D8497000F27096 /* UserDefaults+MockFactory.swift */,
 				1E06D2DF27D8EEAC0092351D /* MockRedditAPI.swift */,
 			);
@@ -614,6 +623,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E06D2E827D8F2F40092351D /* PostData+Stub.swift in Sources */,
+				1E06D2F027D900270092351D /* MockPostListStorage.swift in Sources */,
+				1E06D2EC27D8F7300092351D /* PostListModelTest.swift in Sources */,
 				1E06D2E627D8F2750092351D /* ListingData+Stub.swift in Sources */,
 				1E06D2E427D8F1F00092351D /* RedditPost+Stub.swift in Sources */,
 				1E92992F27D8497000F27096 /* UserDefaults+MockFactory.swift in Sources */,
@@ -621,6 +632,7 @@
 				1E92992527D8406C00F27096 /* FavoritePostListProviderTest.swift in Sources */,
 				1E06D2E027D8EEAC0092351D /* MockRedditAPI.swift in Sources */,
 				1E92992B27D844B000F27096 /* Post+Stub.swift in Sources */,
+				1E06D2EE27D8FFD80092351D /* PostDetailModelTest.swift in Sources */,
 				1E06D2DE27D8EDD80092351D /* RedditPostListProviderTest.swift in Sources */,
 				1E06D2E227D8F1230092351D /* RedditListing+Stub.swift in Sources */,
 				1E92992727D840BA00F27096 /* FavoritePostListStorageTest.swift in Sources */,

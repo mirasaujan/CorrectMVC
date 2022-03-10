@@ -8,28 +8,28 @@
 import Foundation
 
 extension PostListModel {
-    enum State {
+    public enum State {
         case list([Post])
         case error(Error)
     }
 
-    struct Dependency {
+    public struct Dependency {
         let provider: PostListProvider
     }
 }
 
-final class PostListModel {
+public final class PostListModel {
     let dep: Dependency
 
     @Published var state: State = .list([])
 
     var onItemSelect: ((Post) -> Void)?
 
-    init(dep: Dependency) {
+    public init(dep: Dependency) {
         self.dep = dep
     }
 
-    func fetchPosts() {
+    public func fetchPosts() {
         Task {
             do {
                 let posts = try await dep.provider.fetch()

@@ -8,7 +8,7 @@
 import Foundation
 
 public struct Post: Codable, Equatable {
-    let id: String
+    public let id: String
     let title: String?
     let type: PostType
 
