@@ -28,6 +28,7 @@ final class PostListCell: BaseCell {
     }()
 
     override func setup() {
+        accessibilityLabel = "post_list_cell"
         backgroundColor = .systemBackground
         addSubview(imageView)
         imageView.pin(on: .top)

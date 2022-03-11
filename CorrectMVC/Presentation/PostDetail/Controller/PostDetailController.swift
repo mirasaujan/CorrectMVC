@@ -23,12 +23,15 @@ final class PostDetailController: BaseViewController<PostDetailModel, PostDetail
     }
 
     private func createFavoriteNavBar(isFavorite: Bool) {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(
+        let button = UIBarButtonItem(
             image: UIImage(systemName: isFavorite ? "star.fill" : "star"),
             style: .plain,
             target: self,
             action: #selector(favoriteTap)
         )
+
+        button.accessibilityLabel = "favorite_navigation_button"
+        navigationItem.rightBarButtonItem = button
     }
 
     @objc private func favoriteTap() {

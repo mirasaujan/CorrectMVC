@@ -38,6 +38,7 @@ final class PostDetailView: BaseView {
         imageView.pinHeight(to: 300)
 
         addSubview(titleLabel)
+        titleLabel.accessibilityLabel = "title_label"
         titleLabel.pin(on: .leading)
         titleLabel.pin(on: .trailing)
         titleLabel.pin(on: .top, to: imageView, on: .bottom)

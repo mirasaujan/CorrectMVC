@@ -14,7 +14,7 @@ final class LaunchCoordinator {
 
     func start(window: UIWindow?) {
         window?.rootViewController = tb
-
+        window?.makeKeyAndVisible()
         tb.viewControllers = [browse(), favorite()]
     }
 

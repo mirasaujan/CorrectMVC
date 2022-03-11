@@ -17,7 +17,7 @@ class FavoritePostListProvider: PostListProvider {
     func fetch() async throws -> [Post] {
         if let savedPostList = storage.object(forKey: "favorite_storage") as? Data {
             if let list = try? JSONDecoder().decode([Post].self, from: savedPostList) {
-                return list
+                return list.reversed()
             }
         }
 

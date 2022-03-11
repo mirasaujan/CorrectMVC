@@ -18,7 +18,7 @@ final class FavoriteCoordinatorFlow: FavoriteCoordinatorFlowProtocol {
             title: "Favorite") { post in
                 onSelect(post)
             }
-        let assembly = PostListAssembly(context: context, dep: PostListAssembly.Dependency(provider: RedditPostListProvider(apiClient: RedditAPI())))
+        let assembly = PostListAssembly(context: context, dep: PostListAssembly.Dependency(provider: FavoritePostListProvider(storage: UserDefaults.standard)))
 
         return assembly.create()
     }

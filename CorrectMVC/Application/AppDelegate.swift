@@ -17,11 +17,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
         setupNavBar()
+        resetUserDefaultsIfUITest()
+
         window = UIWindow(frame: UIScreen.main.bounds)
         coordinator.start(window: window)
-        window?.makeKeyAndVisible()
 
         return true
+    }
+
+    private func resetUserDefaultsIfUITest() {
+        if ProcessInfo.processInfo.arguments.contains("UI-Test") {
+            UserDefaults.standard.removePersistentDomain(forName: Bundle.main.bundleIdentifier ?? "")
+        }
     }
 
     private func setupNavBar() {
