@@ -947,7 +947,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J7WYSA4KJU;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CorrectMVC/Application/Resources/Info.plist;
+				INFOPLIST_FILE = MemeLog/Application/Resources/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MemeLog;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -959,7 +959,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.MK.CorrectMVC;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MK.MemeLog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -976,7 +976,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J7WYSA4KJU;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CorrectMVC/Application/Resources/Info.plist;
+				INFOPLIST_FILE = MemeLog/Application/Resources/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MemeLog;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -988,7 +988,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.MK.CorrectMVC;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MK.MemeLog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1013,10 +1013,10 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.MK.CorrectMVCTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MK.MemeLogTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_OBJC_BRIDGING_HEADER = "CorrectMVCTests/CorrectMVCTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "MemeLogTests/MemeLogTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1041,10 +1041,10 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.MK.CorrectMVCTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MK.MemeLogTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_OBJC_BRIDGING_HEADER = "CorrectMVCTests/CorrectMVCTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "MemeLogTests/MemeLogTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MemeLog.app/MemeLog";
@@ -1066,14 +1066,14 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.MK.CorrectMVCUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MK.MemeLogUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_OBJC_BRIDGING_HEADER = "CorrectMVCUITests/CorrectMVCUITests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "MemeLogUITests/MemeLogUITests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CorrectMVC;
+				TEST_TARGET_NAME = MemeLog;
 			};
 			name = Debug;
 		};
@@ -1092,13 +1092,13 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.MK.CorrectMVCUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MK.MemeLogUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_OBJC_BRIDGING_HEADER = "CorrectMVCUITests/CorrectMVCUITests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "MemeLogUITests/MemeLogUITests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CorrectMVC;
+				TEST_TARGET_NAME = MemeLog;
 			};
 			name = Release;
 		};
