@@ -23,6 +23,9 @@
 		1E06D30227D9A4CC0092351D /* MockFavoriteCoordinatorFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E06D30127D9A4CC0092351D /* MockFavoriteCoordinatorFlow.swift */; };
 		1E06D30427D9A7AB0092351D /* BrowseCoordinatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E06D30327D9A7AB0092351D /* BrowseCoordinatorTest.swift */; };
 		1E06D30627D9A7D80092351D /* MockBrowseCoordinatorFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E06D30527D9A7D80092351D /* MockBrowseCoordinatorFlow.swift */; };
+		1E09338327DC495600211E00 /* DeeplinkRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E09338227DC495600211E00 /* DeeplinkRegistry.swift */; };
+		1E09338527DC4E9F00211E00 /* Deeplink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E09338427DC4E9F00211E00 /* Deeplink.swift */; };
+		1E09338727DC4F3500211E00 /* FavoriteDeeplink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E09338627DC4F3500211E00 /* FavoriteDeeplink.swift */; };
 		1E63960227D0EBD500DA0B1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E63960127D0EBD500DA0B1A /* AppDelegate.swift */; };
 		1E63960B27D0EBD600DA0B1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E63960A27D0EBD600DA0B1A /* Assets.xcassets */; };
 		1E63960E27D0EBD600DA0B1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E63960C27D0EBD600DA0B1A /* LaunchScreen.storyboard */; };
@@ -103,6 +106,9 @@
 		1E06D30127D9A4CC0092351D /* MockFavoriteCoordinatorFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFavoriteCoordinatorFlow.swift; sourceTree = "<group>"; };
 		1E06D30327D9A7AB0092351D /* BrowseCoordinatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseCoordinatorTest.swift; sourceTree = "<group>"; };
 		1E06D30527D9A7D80092351D /* MockBrowseCoordinatorFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBrowseCoordinatorFlow.swift; sourceTree = "<group>"; };
+		1E09338227DC495600211E00 /* DeeplinkRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeplinkRegistry.swift; sourceTree = "<group>"; };
+		1E09338427DC4E9F00211E00 /* Deeplink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deeplink.swift; sourceTree = "<group>"; };
+		1E09338627DC4F3500211E00 /* FavoriteDeeplink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteDeeplink.swift; sourceTree = "<group>"; };
 		1E6395FE27D0EBD500DA0B1A /* CorrectMVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CorrectMVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E63960127D0EBD500DA0B1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E63960A27D0EBD600DA0B1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -262,6 +268,16 @@
 			path = Presentation;
 			sourceTree = "<group>";
 		};
+		1E09338127DC433100211E00 /* Deeplinks */ = {
+			isa = PBXGroup;
+			children = (
+				1E09338227DC495600211E00 /* DeeplinkRegistry.swift */,
+				1E09338427DC4E9F00211E00 /* Deeplink.swift */,
+				1E09338627DC4F3500211E00 /* FavoriteDeeplink.swift */,
+			);
+			path = Deeplinks;
+			sourceTree = "<group>";
+		};
 		1E6395F527D0EBD500DA0B1A = {
 			isa = PBXGroup;
 			children = (
@@ -318,6 +334,7 @@
 			isa = PBXGroup;
 			children = (
 				1E63960127D0EBD500DA0B1A /* AppDelegate.swift */,
+				1E09338127DC433100211E00 /* Deeplinks */,
 				1E68FC9827D61E0E00057B8D /* Coordinators */,
 				1E68FC5B27D4758200057B8D /* Resources */,
 			);
@@ -694,10 +711,13 @@
 				1E68FC7427D4A8BA00057B8D /* BaseViewController.swift in Sources */,
 				1E68FCC027D64DC900057B8D /* RedditPostListProvider.swift in Sources */,
 				1E68FC8927D5EF0F00057B8D /* PostDetailModel.swift in Sources */,
+				1E09338527DC4E9F00211E00 /* Deeplink.swift in Sources */,
 				1E68FCB927D64D5100057B8D /* RedditListing.swift in Sources */,
 				1E06D2F227D9969F0092351D /* UIView+Layout.swift in Sources */,
 				1E68FC6727D4775B00057B8D /* PostListProvider.swift in Sources */,
 				1E68FC8327D4F52E00057B8D /* PostListLayout.swift in Sources */,
+				1E09338327DC495600211E00 /* DeeplinkRegistry.swift in Sources */,
+				1E09338727DC4F3500211E00 /* FavoriteDeeplink.swift in Sources */,
 				1E68FCA227D626BE00057B8D /* FavoritePostListProvider.swift in Sources */,
 				1E68FC9C27D61EF500057B8D /* BrowseCoordinator.swift in Sources */,
 				1E68FC8D27D5EF2100057B8D /* PostDetailController.swift in Sources */,

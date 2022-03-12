@@ -10,7 +10,7 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
-    let coordinator = LaunchCoordinator()
+    var coordinator: LaunchCoordinator!
 
     func application(
         _ application: UIApplication,
@@ -20,9 +20,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         resetUserDefaultsIfUITest()
 
         window = UIWindow(frame: UIScreen.main.bounds)
-        coordinator.start(window: window)
+        coordinator = LaunchCoordinator(window: window)
+        coordinator.start()
+        
+        DeeplinkRegistry.shared.register(deeplink: FavoriteDeeplink(coordinator: coordinator))
 
         return true
+    }
+
+    func application(
+        _ app: UIApplication,
+        open url: URL,
+        options: [UIApplication.OpenURLOptionsKey : Any] = [:]
+    ) -> Bool {
+        if isDeeplink(url) {
+            handleDeeplink(url)
+        }
+
+        return true
+    }
+
+    private func isDeeplink(_ url: URL) -> Bool {
+        if let scheme = url.scheme {
+            return scheme.localizedCaseInsensitiveCompare("correctMVC") == .orderedSame
+        }
+
+        return false
+    }
+
+    private func handleDeeplink(_ url: URL) {
+        DeeplinkRegistry.shared.handle(url: url)
     }
 
     private func resetUserDefaultsIfUITest() {

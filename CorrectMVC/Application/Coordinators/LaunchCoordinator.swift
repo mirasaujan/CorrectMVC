@@ -8,14 +8,32 @@
 import UIKit
 
 final class LaunchCoordinator {
+    enum Option {
+        case browse
+        case favorite
+    }
+
     private var browseCoordinator: BrowseCoordinator!
     private var favoriteCoordinator: FavoriteCoordinator!
     private let tb = UITabBarController()
 
-    func start(window: UIWindow?) {
+    init(window: UIWindow?) {
         window?.rootViewController = tb
         window?.makeKeyAndVisible()
-        tb.viewControllers = [browse(), favorite()]
+    }
+
+    func start(_ option: Option = .browse) {
+        let browseVC = browse()
+        let favoriteVC = favorite()
+        tb.viewControllers = [browseVC, favoriteVC]
+        switch option {
+        case .browse:
+            tb.selectedViewController = browseVC
+            tb.selectedIndex = 0
+        case .favorite:
+            tb.selectedViewController = favoriteVC
+            tb.selectedIndex = 1
+        }
     }
 
     private func browse() -> UIViewController {
