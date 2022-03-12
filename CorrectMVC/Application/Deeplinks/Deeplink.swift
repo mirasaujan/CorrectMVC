@@ -7,9 +7,9 @@
 
 import Foundation
 
-typealias DeeplinkType = String
+public typealias DeeplinkType = String
 
-protocol Deeplink {
+public protocol Deeplink {
     var type: DeeplinkType { get }
 
     func proccess()
